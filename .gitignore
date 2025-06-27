@@ -1,0 +1,24 @@
+# Node.js and npm
+node_modules/
+npm-debug.log
+.env
+.DS_Store # macOS specific
+Thumbs.db # Windows specific
+
+# Frontend build output (example for Create React App, adjust if different)
+frontend/build/
+frontend/dist/
+
+# Backend build output/logs (if applicable)
+backend/build/
+backend/dist/
+backend/logs/
+
+# Editor specific files
+.vscode/ # VS Code settings
+*.iml # IntelliJ IDEA
+
+# Environment-specific files
+*.log
+.env.*.local
+.eslintcache
