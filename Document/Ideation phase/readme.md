@@ -1,1 +1,0 @@
-Contains all idea phase
