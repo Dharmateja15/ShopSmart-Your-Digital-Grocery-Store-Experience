@@ -33,6 +33,19 @@ o	Admin Panel:
 	Order Viewing: Access and manage all customer orders.
 o	Secure Routing: Implementation of protected routes and authentication middleware to ensure authorized access for users and administrators.
 3. Architecture
+Technical Architecture:
+
+![image](https://github.com/user-attachments/assets/da8753e8-6578-4ffc-a17a-2d83daa4c224)
+
+The technical architecture of an flower and gift delivery app typically involves a client-server model, where the frontend represents the client and the backend serves as the server. The frontend is responsible for user interface, interaction, and presentation, while the backend handles data storage, business logic, and integration with external services like payment gateways and databases. Communication between the frontend and backend is typically facilitated through APIs, enabling seamless data exchange and functionality. 
+
+
+ER Diagram:
+![image](https://github.com/user-attachments/assets/db739e90-58e6-4d39-8d7c-eb2d21ca898f)
+
+The Entity-Relationship (ER) diagram for an flower and gift delivery app visually represents the relationships between different entities involved in the system, such as users, products, orders, and reviews. It illustrates how these entities are related to each other and helps in understanding the overall database structure and data flow within the application.
+
+
 •	Frontend: The client-side of ShopSmart is built using React.js, a popular JavaScript library for building user interfaces.
 o	Component-Based: The UI is structured using a modular, component-based architecture, promoting reusability and maintainability.
 o	React Router: Handles client-side routing, enabling navigation between different pages without full page reloads (e.g., Home, Products, Cart, Admin Dashboard).
@@ -52,7 +65,7 @@ o	Collections (Schema Overview):
 	categories: Stores product category names.
 	carts: (Often implicitly handled via user/product interactions or temporary storage) Could store current user cart items.
 	orders: Stores details of customer orders, including userId, products (array of product IDs and quantities), totalAmount, shippingAddress, status (e.g., 'pending', 'shipped', 'delivered'), and timestamps.
-4. Setup Instructions
+5. Setup Instructions
 To get the ShopSmart application running on your local machine, follow these steps:
 •	Prerequisites:
 o	Node.js: Ensure Node.js (LTS version recommended) is installed. Download from https://nodejs.org/. npm (Node Package Manager) comes bundled with Node.js.
@@ -219,21 +232,29 @@ o	Cypress or Playwright to simulate full user journeys through the application f
 •	Screenshots:  
 Login page:
 ![image](https://github.com/user-attachments/assets/d71c3324-b212-416f-8fa1-83a4def2761f)
-
- 
+Login page:
+![image](https://github.com/user-attachments/assets/834c8d32-6581-404b-a40a-ab073e969406)
 Itempage:
- 
-  
+![Screenshot 2025-06-30 062821](https://github.com/user-attachments/assets/eb7d3c40-731e-471f-9c51-2d56a98815c9)
+My Orders:
+![image](https://github.com/user-attachments/assets/ed92bd57-3b30-4481-a442-717775b3df2e)
+My History:
+![Screenshot 2025-06-30 062849](https://github.com/user-attachments/assets/fd426c66-1418-4d2a-b6b0-bc09d45de3af)
 Placeorderpage:
- Admin Dashboard Page:
- Users Page:-
- Add Product page:-
- Admin Orders Page:-
- The demo of the app is available at:- 
+![image](https://github.com/user-attachments/assets/88b1c478-b8cd-4140-b442-df3156f9f9b7)
+Admin Dashboard Page:
+![Screenshot 2025-06-30 063024](https://github.com/user-attachments/assets/61e35a28-d991-4a9c-8a7d-1b25ffa571cf)
+Users Page:-
+![Screenshot 2025-06-30 063046](https://github.com/user-attachments/assets/25b0d50c-3ac4-4cd7-bb79-a444bc250af5)
+Add Product page:-
+![image](https://github.com/user-attachments/assets/81cf879d-25d6-4416-9760-f08fc0573ee0)
+Admin Orders Page:-
+![Screenshot 2025-06-30 063113](https://github.com/user-attachments/assets/15687dbe-afd6-4af6-8b58-d92ee12ccc87)
+The demo of the app is available at:- 
 Video Demo: A comprehensive video demonstration showcasing the key features and user flows of the ShopSmart application is available here:
 https://drive.google.com/drive/folders/1eKSsV003gl8ecX1EVuPD2oW7uVC6ZxAZ?usp=sharing
 
-12. Known Issues
+13. Known Issues
 This section lists any identified bugs, limitations, or areas that could cause unexpected behavior.
 •	CORS Configuration for Production Deployment: While a proxy is used for local development, proper CORS headers will need to be explicitly configured on the backend for production environments where the frontend and backend are hosted on different domains.
 •	Comprehensive Input Validation: Basic input validation is in place, but more robust and granular server-side validation for all incoming data (especially for product creation/updates and user inputs) could be added to enhance security and data integrity.
@@ -242,7 +263,7 @@ This section lists any identified bugs, limitations, or areas that could cause u
 •	Image Handling: Currently, image URLs are stored. A dedicated image upload service (e.g., Cloudinary, AWS S3) and local file handling should be integrated for more robust image management.
 •	Password Reset Functionality: A formal "Forgot Password" feature with email verification is not yet implemented.
 •	Limited Search & Filtering: Current product search and filtering capabilities are basic. More advanced options (e.g., by price range, brand, multiple categories) are needed.
-13. Future Enhancements
+14. Future Enhancements
 The following features and improvements are planned or considered for future development to enhance ShopSmart's functionality, performance, and user experience:
 •	Payment Gateway Integration: Implement a secure third-party payment gateway (e.g., Stripe, PayPal, Razorpay) to enable real-time online transactions.
 •	Advanced User Profile Management: Allow users to update their profile details (name, shipping address, contact number) from the frontend.
